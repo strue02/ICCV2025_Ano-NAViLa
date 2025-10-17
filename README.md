@@ -18,7 +18,7 @@ The lymph node WSI dataset used for training cannot be publicly released at this
 To enable reproducibility, we provide the trained model weights as follows:
 
 - [Original trained weights](https://drive.google.com/file/d/1ie7ch0Pcvdrf46NyPL2lyckzsuzyPoWI/view?usp=drive_link): Used to obtain the experimental results reported in the paper's tables (100 normal words and 50 abnormal words).  
-- [Cleaned-word pretrained weights](https://drive.google.com/file/d/141a-w_ungtVT9e5vTszAvRonCQEGURSf/view?usp=drive_link): Re-trained using a cleaned vocabulary with duplicates removed, corresponding to the word counts reported in the paper (92 normal words and 48 abnormal words).
+- [Re-trained weights](https://drive.google.com/file/d/141a-w_ungtVT9e5vTszAvRonCQEGURSf/view?usp=drive_link): Re-trained using a cleaned vocabulary with duplicates removed, corresponding to the word counts reported in the paper (92 normal words and 48 abnormal words).
 
 To load a pretrained model without further training, set `"train": 0` and `"update_centroids": 0`, and specify the path to the pretrained weights in `"trained_model_pth"`.
 
