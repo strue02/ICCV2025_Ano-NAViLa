@@ -65,6 +65,5 @@ your_test_raw_WSI_files_top_path/
 ```
 
 To apply the 3×3 erosion described in the paper, the coordinates of each patch are required. Therefore, patch filenames extracted from each WSI should follow the format:
-`{WSI_id}_{w_coord}_{h_coord}_{abnormal_percent(optional)}.png`. If you are only computing patch-level anomaly scores or WSI-level anomaly scores without applying erosion, following this filename convention is not strictly required.
-
-
+`{WSI_id}_{w_coord}_{h_coord}_{abnormal_percent(optional)}.png`. If you are only computing patch-level anomaly scores or WSI-level anomaly scores without applying erosion, following this filename convention is not required.
+When computing WSI-level anomaly scores with the 3×3 erosion applied, make sure the `"WSI_downsampling_factor"` is set to the same value as the patch size specified in `"test_patch_size"` (both width and height of the patch). This setting matches the configuration used in the paper.
