@@ -1,0 +1,31 @@
+{
+    "prefix": "251017",
+    "random_seed": 42,
+
+    "device": "0",
+    "pretrained_VLM": "CONCH",
+    "hf_auth_token": "hf_",
+    "normal_words_path": "./words/normal_words.csv",
+    "abnormal_words_path": "./words/abnormal_words.csv",
+
+    "train": 1,
+    "train_imgs_path": "your_train_normal_patches_top_path",
+    "train_batch_size": 100,
+    "embs_dim": 512,
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "epochs": 1,
+    "accumulate_batches": 100,
+    "trained_model_pth": "./pth/re-trained_AnoNAViLa_Model.pth",
+
+    "update_centroids": 1,
+    "val_imgs_path": "your_valid_normal_patches_top_path",
+
+    "test": 1,
+    "test_patches_WSIs_path": "your_test_WSI_patch_folders_top_path",
+    "test_batch_size": 100,
+    "WSI_level": 1,
+    "test_raw_WSIs_path": "your_test_raw_WSI_files_top_path",
+    "test_patch_size": 256,
+    "WSI_downsampling_factor": 256
+}
