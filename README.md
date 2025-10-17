@@ -21,4 +21,5 @@ To enable reproducibility, we provide the trained model weights as follows:
 - [Cleaned-word pretrained weights](https://drive.google.com/file/d/141a-w_ungtVT9e5vTszAvRonCQEGURSf/view?usp=drive_link): Re-trained using a cleaned vocabulary with duplicates removed, corresponding to the word counts reported in the paper (92 normal words and 48 abnormal words).
 
 **Note on vocabulary sizes:**  
-In the paper, we report 92 normal words and 48 abnormal words. However, the table results were generated using 100 normal words and 50 abnormal words (with duplicates). The cleaned-word model was trained later using a deduplicated vocabulary to match the reported counts.
+In the paper, we report 92 normal words and 48 abnormal words. However, the table results were generated using 100 normal words and 50 abnormal words (with duplicates). The cleaned-word model was trained later using a deduplicated vocabulary to match the reported counts. The normal and abnormal pathology terms used in training can be found in the `words` folder.
+
