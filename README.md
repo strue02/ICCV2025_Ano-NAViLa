@@ -23,3 +23,10 @@ To enable reproducibility, we provide the trained model weights as follows:
 **Note on vocabulary sizes:**  
 In the paper, we report 92 normal words and 48 abnormal words. However, the table results were generated using 100 normal words and 50 abnormal words (with duplicates). The cleaned-word model was trained later using a deduplicated vocabulary to match the reported counts. The normal and abnormal pathology terms used in training can be found in the `words` folder.
 
+## Training and Validation
+
+The paths specified by `"train_imgs_path"` and `"val_imgs_path"` should contain **processed patch images**, not raw WSI files.  
+All images in these directories and their subfolders must be **normal images only**. The folder structure can be arbitrary.
+
+Ideally, validation normal images should not overlap with the training data, as this provides a better estimate of model performance (as done in the paper).  
+However, if sufficient new validation images are not available, it is acceptable to use a subset of the training dataset for validation.
