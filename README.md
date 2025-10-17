@@ -1,4 +1,4 @@
-# ICCV-2025_Ano-NAViLa
+# ICCV2025_Ano-NAViLa
 
 This repository contains the code and resources for the ICCV 2025 paper:
 
