@@ -37,7 +37,7 @@ For our experiments, we used a quite large training dataset, performing 1 epoch 
 
 ### Patch-level Anomaly Scores
 
-To compute patch-level anomaly scores, set `"test": 1` and `"test_patches_WSIs_path"`. The top path should contain subfolders, each named after a WSI's ID ({WSI_id}). Inside each WSI folder, include only the patch images corresponding to that WSI. The folder structure should look like:
+To compute patch-level anomaly scores, set `"test": 1` and `"test_patches_WSIs_path"`. The top path should contain subfolders, each named after a WSI's ID (`{WSI_id}`). Inside each WSI folder, include only the patch images corresponding to that WSI. The folder structure should look like:
 
 ```bibtex
 your_test_WSI_patch_folders_top_path/
