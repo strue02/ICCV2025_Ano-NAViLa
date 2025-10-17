@@ -54,6 +54,17 @@ your_test_WSI_patch_folders_top_path/
 
 ### WSI-level Anomaly Scores
 
-To compute WSI-level anomaly scores after obtaining patch-level scores, set `"WSI_level": 1` and `"test_raw_WSIs_path"`. The top path should contain the raw WSI files named as `{WSI_id}.svs`, corresponding to the WSI IDs used for patch generation. To apply the 3×3 erosion described in the paper, the coordinates of each patch are required. Therefore, patch filenames extracted from each WSI should follow the format:
-`{WSI_id}_{w_coord}_{h_coord}_{abnormal_percent(optional)}.png`.
+To compute WSI-level anomaly scores after obtaining patch-level scores, set `"WSI_level": 1` and `"test_raw_WSIs_path"`. The top path should contain the raw WSI files named as `{WSI_id}.svs`, corresponding to the WSI IDs used for patch generation. The folder structure should look like:
+
+```bibtex
+your_test_raw_WSI_files_top_path/
+├── WSI_001.svs
+├── WSI_002.svs
+├── WSI_003.svs
+└── ...
+```
+
+To apply the 3×3 erosion described in the paper, the coordinates of each patch are required. Therefore, patch filenames extracted from each WSI should follow the format:
+`{WSI_id}_{w_coord}_{h_coord}_{abnormal_percent(optional)}.png`. If you are only computing patch-level anomaly scores or WSI-level anomaly scores without applying erosion, following this filename convention is not strictly required.
+
 
