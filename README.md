@@ -32,3 +32,22 @@ The paths specified by `"train_imgs_path"` and `"val_imgs_path"` should contain 
 Ideally, validation normal images should not overlap with the training data, as this provides a better estimate of model performance (as done in the paper). However, if sufficient new validation images are not available, it is acceptable to use a subset of the training dataset for validation.
 
 For our experiments, we used a quite large training dataset, performing 1 epoch with a batch size of 100 and accumulating 100 batches before each weight update; you may adjust these settings depending on the size of your dataset.
+
+## Test and Inference
+
+### Patch-level Anomaly Scores
+
+To compute patch-level anomaly scores, set `"test": 1` and `"test_patches_WSIs_path"`. The top path should contain subfolders, each named after a WSI's ID ({WSI_id}). Inside each WSI folder, include only the patch images corresponding to that WSI. The folder structure should look like:
+
+```bibtex
+your_test_WSI_patch_folders_top_path/
+├── WSI_001/
+│   ├── patch_001.png
+│   ├── patch_002.png
+│   └── ...
+├── WSI_002/
+│   ├── patch_001.png
+│   ├── patch_002.png
+│   └── ...
+└── ...
+```
