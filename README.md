@@ -42,12 +42,12 @@ To compute patch-level anomaly scores, set `"test": 1` and `"test_patches_WSIs_p
 ```bibtex
 your_test_WSI_patch_folders_top_path/
 ├── WSI_001/
-│   ├── patch_001.png
-│   ├── patch_002.png
+│   ├── WSI_001_0_0_50.png
+│   ├── WSI_001_512_0_40.png
 │   └── ...
 ├── WSI_002/
-│   ├── patch_001.png
-│   ├── patch_002.png
+│   ├── WSI_002_0_0_10.png
+│   ├── WSI_002_1024_512_0.png
 │   └── ...
 └── ...
 ```
